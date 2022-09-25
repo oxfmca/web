@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml 1.1/xhtml//dtd">
+
+<head>
+    <title>The Stacking Order</title>
+
+    <style type="text/css">
+        .layer1style {
+            border: solid thick black;
+            padding: lcm;
+            width: 300px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            top: 100px;
+            left: 200px;
+            z-index: 0;
+        }
+
+        .layer2style {
+            border: solid thick red;
+            padding: 1cm;
+            width: 300px;
+            height: 200px;
+            background-color: blue;
+            position: absolute;
+            top: 120px;
+            left: 220px;
+            z-index: 0;
+        }
+
+        .layer3style {
+            border: solid thick green;
+            padding: 1cm;
+            width: 300px;
+            height: 200px;
+            background-color: purple;
+            position: absolute;
+            top: 140px;
+            left: 240px;
+            z-index: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        vartopLayer = "layer3";
+        varorigpos;
+        function mover(toTop, pos) {
+            varnewTop = document.getElementById(toTop).style;
+            newTop.zIndex = "10";
+            topLayer = document.getElementById(toTop).id;
+            origpos = pos;
+        }
+        functionmoveback()
+        {
+            document.getElementById(topLayer).style.zIndex = origpos;
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Program include Xhtml document to show the stacking of paragraphs.</h2>
+    <div style="z-index:10" class="layer1style" id="layer1" onmouseover="mover('layer1','1')" onmouseout="moveback()">
+        Engg College</div>
+    <div style="z-index:2" ; class="layer2style" id="layer2" onmouseover="mover('layer2','2')" onmouseout="moveback()">
+        MCA Dept</div>
+    <div style="z-index:0" class="layer3style" id="layer3" onmouseover="mover('layer3','3')" onmouseout="moveback()">
+        First Sem</div>
+</body>
+
+</html>

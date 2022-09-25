@@ -1,0 +1,52 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+
+    <head>
+
+        <head>
+            <title>program 5b</title>
+            <script type="text/javascript">
+                function validate(usn) {
+                    var r = 0;
+                    var patt = /[1-4][A-Z][A-Z][0-9][0-9][A-Z][A-Z][A-Z][0-9][0-9]/;
+                    if (!usn.value.match(patt) || usn.value.length > 10) {
+                        alert("invalid, enter valid usn");
+                        usn = "";
+                        return false;
+                    }
+                    else {
+                        var dt = new Date();
+                        var y = parseInt(dt.getFullYear()) - 2000;
+                        var m = dt.getMonth();
+                        var sm = usn.value.substring(3, 5);
+                        var res = y - sm;
+                        if (m < 7)
+                            r = res * 2;
+                        else
+                            r = res * 2 + 1;
+                        if (r > 0 && r < 7) {
+                            alert("it is valid usn\n sem:" + r);
+                        }
+                        else {
+                            alert("invalid, enter valid usn");
+                            usn = "";
+                            return false;
+                        }
+                    }
+                }
+            </script>
+        </head>
+
+    <body bgcolor="pink" style="font-family:castellar, calibri;">
+        <h1>checking usn format</h1>
+        <hr />
+        <form>
+            enterusn:<input type="text" name="usn" size="30">
+            <input type="button" value="check" onclick="validate(usn)">
+        </form>
+    </body>
+
+</html>

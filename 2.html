@@ -1,0 +1,78 @@
+<html>
+
+<head>
+    <link href="special.css" rel="stylesheet" type="text/css">
+</head>
+<style type='text/css'>
+    ul.a {
+        list-style-type: circle;
+    }
+
+    ol.b {
+        list-style-type: upper-roman;
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        text-align: left;
+        width: 200;
+        height: 50;
+        padding: 10pt;
+    }
+</style>
+
+<body bgcolor=pink>
+    <h1 style="color:blue">Example of inline stylesheets</h1>
+    <p style="color:red">
+        <font face="Verdana">Header1</font>
+    </p>
+    <p style="color:blue">
+        <font face="Arial" size="12">Header2</font>
+    </p>
+    <p style="color:red">
+        <font face="Times New Roman" size="11">header3</font>
+    </p>
+
+    <p class="special">this paragraph should have special green text.
+        Unordered List items
+    <ul class="a">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ul><br />
+    Ordered List items<ol class="b">
+        <li>A</li>
+        <li>B</li>
+        <li>C</li>
+    </ol><br />
+    <table>
+        <tr>
+            <th>SlNo</th>
+            <th>Name</th>
+            <th>Contact</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>ABC</td>
+            <td>12213213</td>
+            <td>Bangalore</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>DEF</td>
+            <td>453545</td>
+            <td>Chennai</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>XYZ</td>
+            <td>46456546</td>
+            <td>Delhi</td>
+        </tr>
+    </table>
+</body>
+
+</html>

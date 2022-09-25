@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <scripy src="jquery-3.3.1.min.js" </script>
+        <style>
+            textarea {
+                display: block;
+                margin: 1em 0;
+            }
+        </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            var maxlength = 15;
+            $('textarea').keyup(function () {
+                var textlen = maxlength - $(this).val().length;
+                $('#rchars').text(textlen);
+            });
+        });
+    </script>
+    <form>
+        <label>maximum 15 charcters</label>
+        <textarea id="textarea" maxlength="15"></textarea>
+        <span id="rchars">15</span>characters remainaing
+    </form>
+</body>
+
+</html>
